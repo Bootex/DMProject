@@ -21,7 +21,7 @@ def changelocal (x,y): # x,y의 값의 좌표계를 TM좌표계에서 CONGNAMUL�
     return (results.json())
 
 reader = csv.reader(open('bus_loc_point.csv','r')) #제공받은 bus의 위치데이터가 들어있는 csv파일
-writer = csv.writer(open('bus_value_result_temp.csv', 'w', newline=''))
+writer = csv.writer(open('bus_value_result.csv', 'w', newline=''))
 
 past_header = False # 맨윗줄값을 건너뛰기 위한 변수
 
@@ -31,49 +31,8 @@ for row in reader :
     if not past_header:
         past_header = True
         continue
-    k=changelocal(row[1],row[2])
+    k=changelocal(row[1],row[2]) #좌표계를 변환하여 값을 대입
     loc_x,loc_y=k['x'],k['y']
 
-    print (row[0],match_loc(loc_x,loc_y),row[3])
+    print (row[0],match_loc(loc_x,loc_y),row[3]) #정류소 고유코드와 해당동, 지나가는 버스수를 출력 후, 입력
     writer.writerow([row[0],match_loc(loc_x,loc_y),row[3]])
-
-
-"""
-    k=changelocal(float(busstop_li[i][1]),float(busstop_li[i][2]))
-    loc_x,loc_y=k['x'],k['y']
-    dong = match_loc(loc_x, loc_y)
-
-    print (busstop_li[i][0],dong,busstop_li[i][4][0])
-    writer.writerow([busstop_li[i][0], dong, busstop_li[i][4][0]])
-"""
-
-"""
-for row in reader :
-    if not past_header:
-        past_header = True
-        continue
-
-    if row[0] not in stn_li :
-        busstop_li.append((loc_id, loc_x, loc_y, len(temp_bus), temp_bus)) # [ 정류소고유코드, (좌표x,좌표y), 지나가는버스수, 지나가는버스목록 ]
-        temp_bus = []	# 버스 리스트 리셋
-        loc_id = row[0]
-
-        stn_li.append(loc_id)
-        (loc_x, loc_y) = (row[1], row[2])
-        temp_bus.append(row[3])
-
-print("서울 버스정류장수 :", len(busstop_li))
-print(['버스정류장 코드','동이름','버스수'])
-
-print (busstop_li[1])
-writer = csv.writer(open('bus_value_result_temp.csv', 'w', newline=''))
-writer.writerow(['버스정류장 코드','동이름','버스수'])
-
-for i in range(1,len(busstop_li)):
-
-    k=changelocal(float(busstop_li[i][1]),float(busstop_li[i][2]))
-    loc_x,loc_y=k['x'],k['y']
-    dong = match_loc(loc_x, loc_y)
-    print (busstop_li[i][0],dong,busstop_li[i][4][0])
-    writer.writerow([busstop_li[i][0], dong, busstop_li[i][4][0]])
-"""
