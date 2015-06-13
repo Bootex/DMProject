@@ -3,6 +3,7 @@ __author__ = 'creator'
 import requests as rq
 import csv
 
+
 def getAddressFromNaver(name) :
 	url = "http://map.naver.com/search2/local.nhn" #네이버 지도 검색값
 	header = header = {'User-Agent': 'Mozilla/5.0'} # 헤더값 할당

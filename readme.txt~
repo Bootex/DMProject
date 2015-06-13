@@ -6,4 +6,5 @@ We use programming languages called "Python","R" to parse and analyze data.
 
 Data 폴더에 버스 데이터와 네이버 검색결과를 파싱하고 전처리하는 파이썬 코드가 들어있습니다.
 Visualize 폴더에는 전처리한 결과값에 대한 결과를 시각화한 코드를 두었습니다.
-회귀나무 모델을 RPart를 이용하여 구현하였고, 이에 결정된 값을 통해 최종 후보군을 선출하였습니다.
+회귀나무 모델을 RPart를 이용하여 구현하였고, 이에 결정된 값을 통해 최종결론에 도출하였습니다.
+
