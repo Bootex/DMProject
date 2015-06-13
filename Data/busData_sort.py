@@ -20,8 +20,8 @@ def changelocal (x,y): # x,y의 값의 좌표계를 TM좌표계에서 CONGNAMUL�
                                    })
     return (results.json())
 
-reader = csv.reader(open('bus_loc_point.csv','r')) #제공받은 bus의 위치데이터가 들어있는 csv파일
-writer = csv.writer(open('bus_value_result.csv', 'w', newline=''))
+reader = csv.reader(open('InputData/bus_loc_point.csv','r')) #제공받은 bus의 위치데이터가 들어있는 csv파일
+writer = csv.writer(open('OutputData/bus_value_result.csv', 'w', newline=''))
 
 past_header = False # 맨윗줄값을 건너뛰기 위한 변수
 
