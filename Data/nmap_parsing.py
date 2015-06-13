@@ -19,7 +19,7 @@ def getAddressFromNaver(name) :
 target_li = ['지하철','편의점', '카페', '마트', '은행', '파출소', '우체국', '보건소', '의원'] # 검색 데이터로 쓸 값들
 
 reader = csv.reader(open('InputData/dong_list.csv','r'))          #서울시에 행정동값 데이터가 있는 파일 읽기 스트림 생성
-writer = csv.writer(open('OutputData/nmap_search_result.csv','w'))    #검색결과값이 쓰여질 파일 스트림 생성
+#writer = csv.writer(open('OutputData/nmap_search_result.csv','w'))    #검색결과값이 쓰여질 파일 스트림 생성
 
 print (target_li)
 for row in reader:
@@ -35,4 +35,4 @@ for row in reader:
 
 
     print (gu,dong, t_li)
-    writer.writerow([gu, dong, t_li[0], t_li[1], t_li[2], t_li[3], t_li[4], t_li[5], t_li[6], t_li[7], t_li[8]]) #결과파일에 쓰기
+#    writer.writerow([gu, dong, t_li[0], t_li[1], t_li[2], t_li[3], t_li[4], t_li[5], t_li[6], t_li[7], t_li[8]]) #결과파일에 쓰기
