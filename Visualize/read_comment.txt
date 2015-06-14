@@ -1,0 +1,4 @@
+DongVisualize.py:
+InputData 폴더에서 데이터와 지도이미지를 입력받아, OutputData에 해당 데이터 값에 맞게 지도의 색깔을 바꿔주는 코드입니다.
+
+
