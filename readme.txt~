@@ -4,8 +4,10 @@ We use programming languages called "Python,R" to parse and analyze data.
 Data foder has some python codes to parse naver search result and preprocess.
 Visualize folder has some python codes to visualize the datas using seoul_map.
 Analyze folder has some R codes to analyze and set the recursive tree model.
+Also each folders has InputData and OutputData Folder for helping your comprehension.
+Final analyze be made by using R.
+The model called "Recursive Tree", The model select final set has some features.
 
-Also each folders has InputData and OutputData Folder for helping understand.
 '2015행복주택 공모전'
 행복주택 어디에 설립할 것인가를 데이터 마이닝을 활용하여 풀자라는 생각으로 시작한 프로젝트입니다.
 

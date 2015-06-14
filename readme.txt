@@ -8,9 +8,9 @@ Also each folders has InputData and OutputData Folder for helping your comprehen
 Final analyze be made by using R.
 The model called "Recursive Tree", The model select final set has some features.
 
+
 '2015행복주택 공모전'
 행복주택 어디에 설립할 것인가를 데이터 마이닝을 활용하여 풀자라는 생각으로 시작한 프로젝트입니다.
-
 Data 폴더에 버스 데이터와 네이버 검색결과를 파싱하고 전처리하는 파이썬 코드가 들어있습니다.
 Visualize 폴더에는 전처리한 결과값에 대한 결과를 시각화한 코드를 두었습니다.
 Analyze 폴더에는 최종적인 의사결정을 위한 모델 생성과 정리된 변수파일들이 있습니다.
